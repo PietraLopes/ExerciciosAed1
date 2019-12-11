@@ -1,0 +1,17 @@
+using System;
+
+class MainClass
+{ 
+ 
+  static void Main (string[] args) 
+  {
+    int[] vetor = new int[] {1,2,4,6,8};
+
+    for (int i = 0; i < vetor.Length; i++){
+      if(vetor[i] % 2 == 0)
+      Console.WriteLine ("Elemento do índice {0}: {1}",i,vetor[i]);
+    }
+
+  }
+
+}
