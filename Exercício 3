@@ -1,0 +1,25 @@
+using System;
+
+class MainClass {
+  static void Main (string[] args) 
+  {
+    int numero1, numero2, numero3;
+    Console.WriteLine ("Entre com um número: ");
+    numero1 = int.Parse(Console.ReadLine());
+    Console.WriteLine ("Entre com um número: ");
+    numero2 = int.Parse(Console.ReadLine());
+    Console.WriteLine ("Entre com um número: ");
+    numero3 = int.Parse(Console.ReadLine());
+
+    if (numero1 > numero2 & numero1 > numero3) {
+      Console.WriteLine("O número 1 é o maoir!"+numero1);
+    }
+    if (numero2 > numero1 & numero2 > numero3) {
+      Console.WriteLine("O número 2 é o maoir!"+numero2);
+    }
+    if (numero3 > numero1 & numero3 > numero2) {            Console.WriteLine("O número 3 é o maoir!"+numero3);
+    }
+                     
+
+  }
+}
