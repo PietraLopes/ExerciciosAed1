@@ -1,0 +1,26 @@
+using System;
+using System.IO;
+using System.Text;
+
+class MainClass {
+  public static void Main (string[] args) {
+   
+   FileStream arquivo = new FileStream("numeros.txt", FileMode.Open, FileAccess.Read);
+
+   StreamReader sr= new StreamReader(arquivo, Encoding.UTF7);
+
+int somador = 0;
+   while(!sr.EndOfStream){
+     
+     string str = sr.ReadLine();
+     somador += Convert.ToInt32(str);
+     Console.WriteLine(str);
+
+   }
+Console.WriteLine(somador);
+
+   arquivo.Close();
+   sr.Close();
+
+  }
+}
