@@ -1,0 +1,30 @@
+Classe -  Main.cs
+
+using System;
+
+  class MainClass{
+    
+    public static void Main (string[] args) {
+    
+   Bola cor = new Bola(); 
+    cor.trocaCor("Cor da bola é preta");
+   
+    Console.WriteLine(cor.mostraCor());
+   }
+
+}
+
+Classe - Bola.cs
+
+class Bola {
+  
+  private string cor;
+  
+    public string mostraCor(){
+      return cor;
+    }
+
+    public void trocaCor(string c){
+      cor = c;
+    }
+}
