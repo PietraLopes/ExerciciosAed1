@@ -1,0 +1,16 @@
+using System;
+
+class MainClass {
+  public static void Main (string[] args) {
+    int soma = 0;
+    Console.WriteLine ("Insira um número: ");
+    int num1 = int.Parse(Console.ReadLine());
+    Console.WriteLine ("Insira outro número: ");
+    int num2 = int.Parse(Console.ReadLine());
+   
+    soma = num1+num2;
+
+    Console.WriteLine("A soma dos números é:{0}",soma);
+
+  }
+}
