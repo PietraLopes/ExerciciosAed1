@@ -1,0 +1,26 @@
+using System;
+
+class MainClass {
+  static void Main (string[] args) {
+
+    Console.WriteLine ("Entre com uma opção para o semestre: ");
+    int opcao = Int32.Parse(Console.ReadLine());
+    
+    switch (opcao){
+      case 1: 
+        Console.WriteLine("Você vai programar muito!");
+        break;
+      case 2:
+        Console.WriteLine("Voce vai programar demais!");
+        break;
+      case 3:
+        Console.WriteLine("Voce vai programar pra caramba!");
+        break;
+      default: 
+        Console.WriteLine("Você vai programar todos os dias!");
+        break;
+
+
+    }
+  }
+}
