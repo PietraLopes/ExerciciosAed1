@@ -1,0 +1,18 @@
+using System;
+
+ class MainClass{
+   static void Main(string[] args){
+     int num1,num2,temp;
+     
+     Console.WriteLine("Digite o primeiro número: ");
+     num1 = int.Parse(Console.ReadLine());
+     Console.WriteLine("Digite o segundo número: ");
+     num2 = int.Parse(Console.ReadLine());
+
+     temp = num1;
+     num1 = num2;
+     num2 = temp;
+
+     Console.WriteLine("Os números invertidos ficam assim: {0} e {1}", num1, num2);
+   }
+ }
