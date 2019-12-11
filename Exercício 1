@@ -1,0 +1,22 @@
+Exercício 1 - Mostrar se o aluno foi aprovado ou reprovado.
+
+using System;
+
+class program {
+  static void Main (string[] args) {
+    Console.WriteLine ("Entre com a nota do aluno: ");
+    int nota = int.Parse(Console.ReadLine());
+
+    if (nota >= 5){
+      Console.WriteLine("Aprovado!");
+  }
+  else{
+      Console.WriteLine("Recuperação!");
+  }
+  if (nota >= 9){
+    Console.WriteLine("Parabens, otima nota!");
+  } 
+
+  Console.ReadKey();
+  }
+} 
