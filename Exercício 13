@@ -1,0 +1,40 @@
+Classe - Main.cs
+
+using System;
+
+class MainClass {
+  public static void Main (string[] args) {
+   
+    Data data = new Data(DateTime.Now);
+    
+    data.Data(DateTime.Now);
+  
+    Console.WriteLine("Data escolhida: {0}", data.DataEscolhida);
+    Console.WriteLine("Data mês: {0}", data.NomeMes(data.DataEscolhida));
+
+     
+   
+  }
+}
+
+
+Classe - Data.cs
+
+using System;
+
+public class Data
+{
+  public DateTime DataEscolhida {get;set;}
+
+  public Data(DateTime data)
+  {
+      DataEscolhida = data;
+  }
+
+  public string NomeMes(DateTime data)
+  {
+      return System.Globalization.DateTimeFormatInfo.CurrentInfo.GetMonthName(data.Month);
+  }
+
+
+}
