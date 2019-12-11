@@ -1,0 +1,38 @@
+Classe - Pessoa.csclass Pessoa {
+
+  private string nome;
+  private string idade;
+  
+  
+  public Pessoa(string nom, string idad){
+    nome = nom;
+   idade = idad;
+  }
+
+ public string getNome(){
+    return nome;
+  }
+  public string getIdade(){
+    return idade;
+  }
+}
+
+Classe - PessoaFisica.cs
+
+class PessoaFisica: Pessoa{
+  private string cpf;
+
+  public PessoaFisica(string nome,string idade,string cepef) : base(nome,idade){
+    string cpf = cepef;
+  }
+}
+
+Classe - PessoaJuridica.cs
+
+class PessoaJuridica: Pessoa{
+  private string cnpj;
+
+  public PessoaJuridica(string nome,string idade,string cenepejota) : base(nome,idade){
+    string cbnpj = cenepejota;
+  }
+}
