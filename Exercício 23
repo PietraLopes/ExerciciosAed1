@@ -1,0 +1,35 @@
+using System;
+
+class NumeroMaior {
+  public static void Main (string[] args) {
+    int num1,num2,num3;
+    int numeroMaior = -999;
+
+    string entrada;
+
+    Console.Write("Digite o Primeiro número: ");
+    entrada = Console.ReadLine();
+    num1 = Convert.ToInt32(entrada);
+
+    Console.Write("Digite o Segundo número: ");
+    entrada = Console.ReadLine();
+    num2 = Convert.ToInt32(entrada);
+   
+    Console.Write("Digite o Terceiro número: ");
+    entrada = Console.ReadLine();
+    num3 = Convert.ToInt32(entrada);
+
+    if(num1 > numeroMaior){
+      numeroMaior = num1;
+    }
+    if(num2 > numeroMaior){
+      numeroMaior = num2;
+    }
+    if(num3 > numeroMaior){
+      numeroMaior = num3;
+    }
+
+    Console.Write("O Maior número é: {0}", numeroMaior);
+    Console.ReadKey();
+  }
+}
