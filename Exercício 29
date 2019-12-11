@@ -1,0 +1,97 @@
+Classe - Main.cs
+
+class MainClass {
+  public static void Main (string[] args) {
+    ContaCorrente cc = new ContaCorrente("3453", "Joice", 0.3f);
+
+    cc.Depositar(500f);
+    Console.WriteLine(cc.getSaldo()); cc.Sacar(200); 
+    
+    Console.WriteLine(cc.getSaldo());
+  }
+}
+
+Classe - Conta.cs
+
+class Conta{
+  private string numero;
+  private string titular;
+  private float saldo;  
+
+  public Conta(string num, string tit){
+    numero = num;
+    titular = tit;
+    saldo = 0f;
+  }
+
+  public string getNumero(){
+    return numero;
+  }
+  public string getTitular(){
+    return titular;
+  }
+  public float getSaldo(){
+    return saldo;
+  }
+
+  public void setNumero(string novo_num){
+    numero = novo_num;
+  }
+
+  public void setTitular(string novo_tit){
+    titular = novo_tit;
+  }
+
+  public bool Sacar(float qtd){
+    if( qtd > 0 && qtd <= saldo  ){
+      saldo -= qtd;
+      return true;
+    }
+    return false;  
+  }
+
+  public bool Depositar(float qtd){
+    if( qtd > 0){
+      saldo += qtd;
+      return true;
+    }
+    return false;
+  }
+}
+
+Classe - ContaCorrente.cs
+
+class ContaCorrente : Conta{
+  private float taxa_adm;
+
+  public ContaCorrente(string num, string tit, float taxa) : base(num, tit) 
+  {
+    taxa_adm = taxa;
+    if(taxa <= 0){
+      try {
+        Console.WriteLine("Valor de taxa inválido");
+      }
+    }
+  }
+  public getTaxa(){
+    return taxa;
+  }
+  public void serTaxa(float nova_taxa ){
+    taxa = nova_taxa;
+
+  }
+}
+
+Classe - ContaPoupança.cs
+
+class ContaPoupanca : Conta {
+  private float rendimento;
+
+  public ContaPoupanca(string num, string tit, float rend) : base(num, tit) 
+  {
+    rendimento = rend;
+  }
+}
+   
+
+
