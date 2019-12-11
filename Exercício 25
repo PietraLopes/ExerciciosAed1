@@ -1,0 +1,26 @@
+using System;
+
+class MainClass{
+  static void Main(string[] args){
+    int hora=0;
+    
+    Console.WriteLine("Que Horas são? ");
+    hora = int.Parse(Console.ReadLine());
+
+    if (hora >= 6 && hora < 12){
+      Console.WriteLine("Bom Dia!");
+      }
+
+    else if(hora >= 12 && hora < 18){
+      Console.WriteLine("Boa Tarde!");
+     }
+
+    else if(hora >= 18 && hora < 24){
+      Console.WriteLine("Boa Noite!");
+    }
+    else{
+      Console.WriteLine("Madrugada!!");
+   
+    }
+  }
+}
