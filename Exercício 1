@@ -1,5 +1,3 @@
-Exercício 1 - Mostrar se o aluno foi aprovado ou reprovado.
-
 using System;
 
 class program {
