@@ -1,0 +1,76 @@
+Classe - Manin.cs
+using System;
+
+class MainClass {
+  public static void Main (string[] args) {
+   
+   Caneta joyce=new Caneta("Azul","bic",90f);
+   Caneta  pamela=new Caneta("Azul","bic",50f);
+   
+
+   Console.WriteLine(joyce.ResumoDados());
+   Console.WriteLine(pamela.ResumoDados());
+   
+   joyce.TransferirCarga(pamela,10);
+   Console.WriteLine("Transfeirndo");
+   Console.WriteLine(joyce.ResumoDados());
+   Console.WriteLine(pamela.ResumoDados());
+  
+  }
+}
+
+Classe - Caneta.cs
+
+
+   
+  
+ 
+class Caneta{
+
+private string cor;
+private string marca;
+private float qtdtinta;
+private float max_padrao=110f;
+
+
+public Caneta(){
+cor ="azul";
+marca= "bic";
+qtdtinta =100f;
+max_padrao=100f;
+
+}
+ public Caneta (string cor,string marca, float qt){ 
+   this.cor=cor ;
+   this.marca=marca;
+   this.qtdtinta=qt;
+   this.max_padrao=100f;
+ }
+
+public string getcor(){
+  return cor;
+}
+
+public void setcor(string c ){
+  cor =  c;
+}
+ 
+public string ResumoDados(){
+return string.Format("cor:,{0},marca:,{1},Qtd:,{2}",cor,marca,qtdtinta);
+} 
+public bool  TransferirCarga(Caneta destino,float qtd){
+
+if (( destino.max_padrao-destino.qtdtinta) >= qtd ){
+  if (this.qtdtinta>= qtd){
+    if (destino.cor== this.cor ){
+      destino.qtdtinta += qtd;
+      this.qtdtinta -=qtd;
+      return true(yes);
+    }
+  }
+}
+
+return false;
+
+}
+}
