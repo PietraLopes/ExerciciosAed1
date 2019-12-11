@@ -1,0 +1,17 @@
+using System;
+
+class MainClass {
+  public static int Resto(int n, int m ) {
+    if(n < m)
+      return n;
+    return Resto(n-m, m);
+  }
+
+  static void Main(string[] args){
+    int n = 13;
+    int m = 7;
+    Console.WriteLine("O Resto de {0} por {1} é {2}.", n, m, Resto(n, m));
+
+    Console.ReadKey();
+  }
+}
